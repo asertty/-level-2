@@ -1,0 +1,25 @@
+package Main;
+
+public class Main {
+
+	public static void main(String[] args) {
+    int 숫자 = 입력기.nextInt();
+
+           boolean 숫자판별기 = false;
+
+           for(int i=숫자; i>0; i++) {
+
+               int 숫자조각 = i % 10;
+
+               if(숫자조각 != 0 && 숫자조각 !=1) {
+
+                   System.out.println("값을 다시 입력하세요.");
+
+                   break;
+
+               }
+
+               if(i==0) 숫자판별기 = true;
+
+           }
+
