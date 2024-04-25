@@ -1,0 +1,72 @@
+절차지향 프로그래밍 - 값(변수)
+객체지향 프로그래밍 - 값(변수) + 메소드
+
+package Main;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		String name = "ㅇㅇ";
+		
+		String 이름 = new String("ㅇㅇ");
+		
+		System.out.println(name == 이름);
+		
+		String arr = "0101011234567";
+		int 성별 = Character.getNumericValue(arr.charAt(6));
+		System.out.println(성별);
+		
+		switch (성별) {
+		case 1,3:
+			System.out.println("남자");
+			break;
+		case 2,4:
+			System.out.println("여자");
+			break;
+		}
+		
+		String a = "1,2,3";
+		String[] num = a.split(",");
+		
+		System.out.println(num);
+		
+		
+		 // for (int i = 0; i < num.length; i++) {
+		 //	  System.out.println(num[i]); 
+		 //	}
+		 
+		for(String i : num) {
+			System.out.println(i);
+		}
+		Human h1 = new Human();
+		h1.자기소개();
+		h1.키 = 160;
+		h1.몸무게 = 50;
+		h1.이름 = "ㅇㅇ";
+		
+		h1.자기소개();
+	}
+
+}
+
+package Main;
+
+public class Human {
+// 필드(변수, 속성)
+	int 키;
+	int 몸무게;
+	String 이름;
+	
+	Human(int 키, int 몸무게, String 이름){
+		this.키 = 키;
+		this.몸무게 = 몸무게;
+		this.이름 = 이름;
+	}
+	
+// 메소드(함수, 기능)
+	void 자기소개() {
+		System.out.printf("제 이름은 %s, 키는 %d, 몸무게는 %d kg입니다.\n", 이름, 키, 몸무게);
+	}
+
+}
