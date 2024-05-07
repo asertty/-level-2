@@ -1,0 +1,93 @@
+package Main;
+
+public class Monstermain {
+
+	public static void main(String[] args) {
+		Monster m1 = new Monster();
+		Monster m2 = new Monster(50, 30,"한결");
+		Monster m3 = new Monster("쨈결");
+		
+		int num = 28;
+		
+		
+//		m1.체력 = 100;
+//		m1.공격력 = 15.1f;
+//		m1.이름 = "결이";
+		
+//		m1.포효();
+//		m2.포효();
+		m3.포효();
+		System.out.println(m1.체력);
+		System.out.println(m1.get체력());
+		m1.set체력(200);
+		m1.set체력(300);
+		
+		for (int i = 1; i <= 100; i++) {
+			m1 .달리기();
+		}
+	}
+
+}
+
+package Main;
+
+public class Monster {
+
+	int 체력;
+	float 공격력;
+	String 이름;
+	
+	public int get체력() {
+		return 체력;
+	}
+	public int set체력(int 체력) {
+		this.체력 = 체력;
+	}
+	
+	void 포효() {
+		System.out.printf("%s가 포효합니다. 크아앙~\n", 이름);
+	}
+	
+	void 달리기() {
+		달리기(1);
+
+	}
+	
+	void 달리기(int 횟수) {
+		for(int i = 1; i <= 횟수; i++) {
+		체력 --;
+		System.out.printf("%s(이)가 뜁니다. 체력이 %d가 되었습니다\n", 이름, 체력);
+		
+		if(체력 <= 0) {
+			System.out.printf("%s(이)가 죽었습니다.\n", 이름);
+		}
+	}
+}
+	Monster(){	
+//		this(100, 15, "한결");
+		체력 = 100;
+		공격력 = 15.1f;
+		이름 = "결이";
+		
+	}
+	
+	Monster(int i, int j, String string){	
+	/* i = 50, j = 30, string = 한결 */
+		체력 = i;
+		공격력 = j;
+		이름 = string;
+		
+//		  Monster(int 체력, float 공격력, String 이름){	
+//		  this.체력 = 체력; 
+//		  this.공격력 = 공격력;
+//		  this.이름 = 이름;
+	}
+
+	 Monster(String 이름) {
+		this.이름 = 이름;
+
+	}
+	
+	
+	
+	}
