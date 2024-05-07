@@ -39,7 +39,9 @@ public class Main {
 		for(String i : num) {
 			System.out.println(i);
 		}
-		Human h1 = new Human();
+		Human h1;
+		h1 = new Human();
+
 		h1.자기소개();
 		h1.키 = 160;
 		h1.몸무게 = 50;
